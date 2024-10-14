@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change Detection</title>
+</head>
+<body>
+    <h1>Image Change Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="original_image">Upload Original Image:</label>
+        <input type="file" id="original_image" name="original_image" required><br><br>
+        <label for="modified_image">Upload Modified Image:</label>
+        <input type="file" id="modified_image" name="modified_image" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if diff_percentage is not none %}
+        <h2>Percentage of Modification: {{ diff_percentage }}%</h2>
+        <h3>Original Image:</h3>
+        <img src="{{ original_image }}" alt="Original Image" width="300">
+        <h3>Modified Image:</h3>
+        <img src="{{ modified_image }}" alt="Modified Image" width="300">
+        <h3>Difference Image:</h3>
+        <img src="{{ diff_image }}" alt="Difference Image" width="300">
+    {% endif %}
+</body>
+</html>
