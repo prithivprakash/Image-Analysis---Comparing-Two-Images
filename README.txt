@@ -27,15 +27,18 @@ Installation:
 1. Clone the repository.
 2. Install the required libraries:
 
+```bash
 pip install opencv-python scikit-image
+```
 
 Usage:
 
 1. Add the two images you want to compare into the project folder.
 2. Run the script with the image paths as input arguments:
 
+```bash
 python image_difference.py image1.jpg image2.jpg
-
+```
 3. The script will display the differences, highlighting the changes between the images.
 
 Future Improvements:
